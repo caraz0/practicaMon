@@ -9,5 +9,21 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Prevenir zoom en doble toque en móviles */
+  touch-action: pan-x pan-y;
+}
+
+/* Mejorar la experiencia táctil */
+.touch-manipulation {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Prevenir selección de texto accidental en las letras de la grilla */
+[class*="grid"] > div {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 

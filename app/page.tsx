@@ -219,26 +219,26 @@ export default function ExperimentPage() {
 
   if (!isRunning && !isFinished) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
-        <div className="bg-white rounded-lg shadow-xl p-8 max-w-2xl w-full">
-          <h1 className="text-3xl font-bold text-center mb-6 text-gray-800">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-3 sm:p-4">
+        <div className="bg-white rounded-lg shadow-xl p-4 sm:p-6 md:p-8 max-w-2xl w-full">
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-4 sm:mb-6 text-gray-800">
             Experimento de Tachado de Letras
           </h1>
-          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
-            <p className="text-lg font-semibold text-gray-800 mb-2">Instrucciones:</p>
-            <p className="text-gray-700">{INSTRUCTION}</p>
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 sm:p-4 mb-4 sm:mb-6">
+            <p className="text-base sm:text-lg font-semibold text-gray-800 mb-2">Instrucciones:</p>
+            <p className="text-sm sm:text-base text-gray-700">{INSTRUCTION}</p>
           </div>
-          <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
-            <p className="text-gray-700">
+          <div className="bg-blue-50 border-l-4 border-blue-400 p-3 sm:p-4 mb-4 sm:mb-6">
+            <p className="text-sm sm:text-base text-gray-700">
               <strong>Tiempo disponible:</strong> 3 minutos
             </p>
-            <p className="text-gray-700 mt-2">
+            <p className="text-sm sm:text-base text-gray-700 mt-2">
               <strong>Objetivo:</strong> Selecciona todas las letras "c" que cumplan con las condiciones indicadas.
             </p>
           </div>
           <button
             onClick={startExperiment}
-            className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-6 rounded-lg text-lg transition-colors"
+            className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-lg text-base sm:text-lg transition-colors"
           >
             Comenzar Experimento
           </button>
@@ -249,31 +249,31 @@ export default function ExperimentPage() {
 
   if (isFinished && results) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
-        <div className="bg-white rounded-lg shadow-xl p-8 max-w-2xl w-full">
-          <h1 className="text-3xl font-bold text-center mb-6 text-gray-800">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-3 sm:p-4">
+        <div className="bg-white rounded-lg shadow-xl p-4 sm:p-6 md:p-8 max-w-2xl w-full">
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-4 sm:mb-6 text-gray-800">
             Experimento Finalizado
           </h1>
-          <div className="space-y-4 mb-6">
-            <div className="bg-green-50 border-l-4 border-green-400 p-4">
-              <p className="text-lg font-semibold text-gray-800">Correctas:</p>
-              <p className="text-2xl font-bold text-green-600">{results.correct}</p>
+          <div className="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
+            <div className="bg-green-50 border-l-4 border-green-400 p-3 sm:p-4">
+              <p className="text-base sm:text-lg font-semibold text-gray-800">Correctas:</p>
+              <p className="text-xl sm:text-2xl font-bold text-green-600">{results.correct}</p>
             </div>
-            <div className="bg-red-50 border-l-4 border-red-400 p-4">
-              <p className="text-lg font-semibold text-gray-800">Incorrectas:</p>
-              <p className="text-2xl font-bold text-red-600">{results.incorrect}</p>
+            <div className="bg-red-50 border-l-4 border-red-400 p-3 sm:p-4">
+              <p className="text-base sm:text-lg font-semibold text-gray-800">Incorrectas:</p>
+              <p className="text-xl sm:text-2xl font-bold text-red-600">{results.incorrect}</p>
             </div>
-            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4">
-              <p className="text-lg font-semibold text-gray-800">Omitidas:</p>
-              <p className="text-2xl font-bold text-yellow-600">{results.missed}</p>
+            <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 sm:p-4">
+              <p className="text-base sm:text-lg font-semibold text-gray-800">Omitidas:</p>
+              <p className="text-xl sm:text-2xl font-bold text-yellow-600">{results.missed}</p>
             </div>
-            <div className="bg-blue-50 border-l-4 border-blue-400 p-4">
-              <p className="text-lg font-semibold text-gray-800">Total seleccionadas:</p>
-              <p className="text-2xl font-bold text-blue-600">{results.totalSelected}</p>
+            <div className="bg-blue-50 border-l-4 border-blue-400 p-3 sm:p-4">
+              <p className="text-base sm:text-lg font-semibold text-gray-800">Total seleccionadas:</p>
+              <p className="text-xl sm:text-2xl font-bold text-blue-600">{results.totalSelected}</p>
             </div>
-            <div className="bg-gray-50 border-l-4 border-gray-400 p-4">
-              <p className="text-lg font-semibold text-gray-800">Precisión:</p>
-              <p className="text-2xl font-bold text-gray-600">
+            <div className="bg-gray-50 border-l-4 border-gray-400 p-3 sm:p-4">
+              <p className="text-base sm:text-lg font-semibold text-gray-800">Precisión:</p>
+              <p className="text-xl sm:text-2xl font-bold text-gray-600">
                 {results.totalSelected > 0
                   ? ((results.correct / results.totalSelected) * 100).toFixed(1)
                   : 0}%
@@ -282,7 +282,7 @@ export default function ExperimentPage() {
           </div>
           <button
             onClick={startExperiment}
-            className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-6 rounded-lg text-lg transition-colors"
+            className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-lg text-base sm:text-lg transition-colors"
           >
             Reiniciar Experimento
           </button>
@@ -292,18 +292,18 @@ export default function ExperimentPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-2 sm:p-3 md:p-4">
       <div className="max-w-6xl mx-auto">
         {/* Header con instrucciones y temporizador */}
-        <div className="bg-white rounded-lg shadow-lg p-4 mb-4 sticky top-4 z-10">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex-1">
-              <p className="text-sm font-semibold text-gray-600 mb-1">Instrucción:</p>
-              <p className="text-sm text-gray-800">{INSTRUCTION}</p>
+        <div className="bg-white rounded-lg shadow-lg p-2 sm:p-3 md:p-4 mb-2 sm:mb-3 md:mb-4 sticky top-0 sm:top-2 md:top-4 z-10">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-3 md:gap-4">
+            <div className="flex-1 min-w-0">
+              <p className="text-xs sm:text-sm font-semibold text-gray-600 mb-1">Instrucción:</p>
+              <p className="text-xs sm:text-sm text-gray-800 leading-tight">{INSTRUCTION}</p>
             </div>
-            <div className="text-center">
-              <p className="text-sm font-semibold text-gray-600 mb-1">Tiempo restante:</p>
-              <p className={`text-3xl font-bold ${timeLeft <= 30 ? 'text-red-600' : 'text-indigo-600'}`}>
+            <div className="text-center sm:text-right flex-shrink-0">
+              <p className="text-xs sm:text-sm font-semibold text-gray-600 mb-1">Tiempo restante:</p>
+              <p className={`text-xl sm:text-2xl md:text-3xl font-bold ${timeLeft <= 30 ? 'text-red-600' : 'text-indigo-600'}`}>
                 {formatTime(timeLeft)}
               </p>
             </div>
@@ -311,12 +311,12 @@ export default function ExperimentPage() {
         </div>
 
         {/* Grilla de letras */}
-        <div className="bg-white rounded-lg shadow-lg p-6 overflow-x-auto">
-          <div className="inline-block">
+        <div className="bg-white rounded-lg shadow-lg p-2 sm:p-4 md:p-6 overflow-x-auto -mx-2 sm:mx-0">
+          <div className="inline-block min-w-full">
             <div className="grid gap-0" style={{ gridTemplateColumns: `repeat(${LETTER_SEQUENCE[0]?.length || 40}, minmax(0, 1fr))` }}>
               {letters.map((letter, index) => {
                 const getLetterStyle = () => {
-                  const baseStyle = 'w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center text-xs sm:text-sm font-mono transition-all border border-gray-200'
+                  const baseStyle = 'w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8 flex items-center justify-center text-[10px] sm:text-xs md:text-sm font-mono transition-all border border-gray-200 touch-manipulation'
                   
                   if (letter.char === 'c') {
                     switch (letter.state) {
@@ -325,9 +325,9 @@ export default function ExperimentPage() {
                       case 'incorrect':
                         return `${baseStyle} bg-red-200 text-red-800 font-bold border-red-400 cursor-default`
                       case 'selected':
-                        return `${baseStyle} bg-blue-200 text-blue-800 border-blue-400 cursor-pointer`
+                        return `${baseStyle} bg-blue-200 text-blue-800 border-blue-400 cursor-pointer active:bg-blue-300`
                       default:
-                        return `${baseStyle} bg-gray-50 text-gray-600 cursor-pointer hover:bg-gray-100`
+                        return `${baseStyle} bg-gray-50 text-gray-600 cursor-pointer hover:bg-gray-100 active:bg-gray-200`
                     }
                   }
                   
@@ -339,7 +339,13 @@ export default function ExperimentPage() {
                     key={`${letter.row}-${letter.col}`}
                     className={getLetterStyle()}
                     onClick={() => handleLetterClick(letter.row, letter.col)}
-                    title={letter.char === 'c' ? 'Clic para seleccionar' : ''}
+                    onTouchStart={(e) => {
+                      // Prevenir zoom en doble toque en móvil
+                      if (e.touches.length > 1) {
+                        e.preventDefault()
+                      }
+                    }}
+                    title={letter.char === 'c' ? 'Toca para seleccionar' : ''}
                   >
                     {letter.char}
                   </div>
@@ -350,19 +356,19 @@ export default function ExperimentPage() {
         </div>
 
         {/* Leyenda */}
-        <div className="bg-white rounded-lg shadow-lg p-4 mt-4">
-          <div className="flex flex-wrap gap-4 text-sm">
-            <div className="flex items-center gap-2">
-              <div className="w-6 h-6 bg-blue-200 border border-blue-400"></div>
-              <span className="text-gray-700">C seleccionada</span>
+        <div className="bg-white rounded-lg shadow-lg p-2 sm:p-3 md:p-4 mt-2 sm:mt-3 md:mt-4">
+          <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 text-xs sm:text-sm">
+            <div className="flex items-center gap-1.5 sm:gap-2">
+              <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 bg-blue-200 border border-blue-400 flex-shrink-0"></div>
+              <span className="text-gray-700 whitespace-nowrap">C seleccionada</span>
             </div>
-            <div className="flex items-center gap-2">
-              <div className="w-6 h-6 bg-green-200 border border-green-400"></div>
-              <span className="text-gray-700">C correcta (al finalizar)</span>
+            <div className="flex items-center gap-1.5 sm:gap-2">
+              <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 bg-green-200 border border-green-400 flex-shrink-0"></div>
+              <span className="text-gray-700 whitespace-nowrap">C correcta (final)</span>
             </div>
-            <div className="flex items-center gap-2">
-              <div className="w-6 h-6 bg-red-200 border border-red-400"></div>
-              <span className="text-gray-700">C incorrecta (al finalizar)</span>
+            <div className="flex items-center gap-1.5 sm:gap-2">
+              <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 bg-red-200 border border-red-400 flex-shrink-0"></div>
+              <span className="text-gray-700 whitespace-nowrap">C incorrecta (final)</span>
             </div>
           </div>
         </div>
