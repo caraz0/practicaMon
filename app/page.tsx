@@ -137,9 +137,9 @@ export default function ExperimentPage() {
     setIsFinished(true)
     setIsRunning(false)
 
-    setLetters(currentLetters => {
+    setLetters((currentLetters: LetterData[]): LetterData[] => {
       // Validar todas las letras seleccionadas y marcarlas como correctas o incorrectas
-      const updatedLetters: LetterData[] = currentLetters.map(letter => {
+      const updatedLetters: LetterData[] = currentLetters.map((letter: LetterData): LetterData => {
         if (letter.state === 'selected' && letter.char === 'c') {
           // Verificar si es correcta
           const prevLetter = currentLetters.find(l => l.row === letter.row && l.col === letter.col - 1)
@@ -147,9 +147,11 @@ export default function ExperimentPage() {
           
           const isCorrect = (prevLetter && prevLetter.char === 'a') || (nextLetter && nextLetter.char === 'e')
           
+          const newState: LetterState = isCorrect ? 'correct' : 'incorrect'
+          
           return {
             ...letter,
-            state: (isCorrect ? 'correct' : 'incorrect') as LetterState,
+            state: newState,
           }
         }
         return letter
